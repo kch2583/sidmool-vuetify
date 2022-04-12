@@ -1,12 +1,11 @@
 <template>
   <v-container>
     <v-row>
-      <v-col v-for="src in logoSrcList" :key="src" cols="2">
+      <v-col v-for="src in logoSrcList" :key="src" cols="1">
         <v-img
           :src="'../src/assets/certifications_image/' + src"
+          aspect-ratio="1.5"
           contain
-          max-height="60"
-          max-width="120"
         ></v-img>
       </v-col>
     </v-row>

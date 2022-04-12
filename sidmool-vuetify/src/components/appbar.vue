@@ -14,8 +14,9 @@
     <v-btn x-small plain v-for="item in list" :key="item" text rounded>
       {{ item }}
     </v-btn>
+
     <template v-slot:extension>
-      <v-tabs show-arrows="" centered>
+      <v-tabs show-arrows centered color="#7da135" name="mainTab">
         <v-tab v-for="tab in tabList" :key="tab"> {{ tab }}</v-tab>
       </v-tabs>
     </template>
@@ -34,7 +35,6 @@ export default {
       "고객센터"
     ],
     tabList: [
-      "제품 전체보기",
       "시드물 소개",
       "포토후기",
       "사용후기",

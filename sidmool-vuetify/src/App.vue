@@ -1,10 +1,10 @@
 <template>
   <v-app>
     <Appbar />
-    <Tab />
     <MainCarousel />
+    <ProductTab />
     <v-main>
-      <HelloWorld />
+      <NewProducts />
     </v-main>
     <Certifications />
     <Footer />
@@ -16,8 +16,9 @@ import HelloWorld from "./components/HelloWorld";
 import Footer from "./components/footer.vue";
 import Certifications from "./components/certifications.vue";
 import Appbar from "./components/appbar.vue";
-import Tab from "./components/tab.vue";
 import MainCarousel from "./components/mainCarousel.vue";
+import ProductTab from "./components/productTab.vue";
+import NewProducts from "./components/newProducts.vue";
 export default {
   name: "App",
 
@@ -26,8 +27,9 @@ export default {
     Footer,
     Certifications,
     Appbar,
-    Tab,
-    MainCarousel
+    NewProducts,
+    MainCarousel,
+    ProductTab
   },
   data: () => ({
     //
