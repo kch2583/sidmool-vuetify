@@ -11,6 +11,7 @@
       :key="image"
       :src="'../src/assets/carousel_image/' + image"
       contain
+      height="100%"
     ></v-carousel-item>
   </v-carousel>
 </template>

@@ -1,5 +1,5 @@
 <template>
-  <v-app-bar align-center elevation="0" background-color="transparent">
+  <v-app-bar align-center elevation="0" app>
     <v-toolbar-title>SIDMOOL</v-toolbar-title>
     <v-spacer></v-spacer>
     <v-form
@@ -17,7 +17,9 @@
 
     <template v-slot:extension>
       <v-tabs show-arrows centered color="#7da135" name="mainTab">
-        <v-tab v-for="tab in tabList" :key="tab"> {{ tab }}</v-tab>
+        <v-tab v-for="tab in tabList" :key="tab.name" :to="tab.to">
+          {{ tab.name }}</v-tab
+        >
       </v-tabs>
     </template>
   </v-app-bar>
@@ -35,14 +37,15 @@ export default {
       "고객센터"
     ],
     tabList: [
-      "시드물 소개",
-      "포토후기",
-      "사용후기",
-      "전 어떻게 써요?",
-      "성분사전",
-      "1:1 문의 게시판",
-      "시드물 통신",
-      "시사모 자유게시판"
+      { to: "", name: "시드물 소개" },
+      { to: "", name: "포토후기" },
+      { to: "", name: "사용후기" },
+
+      { to: "/howtouse", name: "전 어떻게 써요?" },
+      { to: "", name: "성분사전" },
+      { to: "", name: "1:1 문의 게시판" },
+      { to: "", name: "시드물 통신" },
+      { to: "", name: "시사모 자유게시판" }
     ]
   })
 };
